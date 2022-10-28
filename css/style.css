@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "jost";
+  background-color: #131A52;
+}
+
+@font-face {
+  font-family: "Jost";
+  font-weight: 900;
+  src: url("../fonts/Jost-Black.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  font-weight: 700;
+  src: url("../fonts/Jost-Bold.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  font-weight: 800;
+  src: url("../fonts/Jost-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  font-weight: 500;
+  src: url("../fonts/Jost-Medium.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  font-weight: 400;
+  src: url("../fonts/Jost-Regular.ttf");
+}
+@font-face {
+  font-family: "Jost";
+  font-weight: 600;
+  src: url("../fonts/Jost-SemiBold.ttf");
+}
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
