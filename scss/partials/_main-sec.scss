@@ -1,3 +1,7 @@
+.main-section{
+    @include background(url("../img/main-sec-img.png"), 100% 100%, center, no-repeat);
+    padding-bottom: 285px;
+}
 .topber{
     @include display(flex, row, initial, center);
     padding-top: 23px;
@@ -11,22 +15,85 @@
     }
     h2{
         @include fonts(18px, 900, 20px);
+        color: $dark27;
+
+        @include media(768px) {
+            font-size: 21px;
+        }
     }
 }
 
 .top-menu{
-    margin-left: 91px;
+    margin-left: 5%;
+    display: none;
+
+    @include media(992px) {
+        display: block;
+    }
+    @include media(1200px) {
+        margin-left: 7%;
+    }
+
     ul{
         @include display(flex, row, initial, initial);
         column-gap: 24px;
 
         a{
             @include fonts(14px, 500, 20px);
-            color: black;
+            color: $dark14;
         }
     }
 }
 
 .top-right{
     margin-left: auto;
+
+    button:nth-child(2){
+        background-color: initial;
+        color: $dark14;
+        margin-right: 12px;
+        display: none;
+
+        @include media(992px) {
+            display: initial;
+            margin-right: 15px;
+        }
+        @include media(1200px) {
+            margin-right: 18px;
+        }
+    }
+
+    button:nth-child(1) {
+        display: block;
+        color: $dark14;
+        font-size: 25px;
+        border: none;
+
+        @include media(992px) {
+            display: none;
+        }
+    }
+    button:nth-child(3) {
+        display: none;
+
+        @include media(992px) {
+            display: initial;
+        }
+    }
+}
+
+.main-heading{
+    margin-top: 76px;
+
+    h1{
+        display: flex;
+        flex-flow: column wrap;
+        @include fonts(40px, 800, 110%);
+        margin-bottom: 28px;
+
+        @include media(768px) {
+            font-size: 50px;
+            line-height: 126%;
+        }
+    }
 }

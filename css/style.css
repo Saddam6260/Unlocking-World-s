@@ -86,6 +86,9 @@ body {
   padding-bottom: 12px;
   padding-left: 32px;
   padding-right: 32px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 ul {
@@ -94,6 +97,14 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.main-section {
+  background-image: url("../img/main-sec-img.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 285px;
 }
 
 .topber {
@@ -118,10 +129,27 @@ a {
   font-size: 18px;
   font-weight: 900;
   line-height: 20px;
+  color: #141527;
+}
+@media only screen and (min-width: 768px) {
+  .tophead-logo h2 {
+    font-size: 21px;
+  }
 }
 
 .top-menu {
-  margin-left: 91px;
+  margin-left: 5%;
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .top-menu {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .top-menu {
+    margin-left: 7%;
+  }
 }
 .top-menu ul {
   display: flex;
@@ -134,11 +162,65 @@ a {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  color: black;
+  color: #090A14;
 }
 
 .top-right {
   margin-left: auto;
+}
+.top-right button:nth-child(2) {
+  background-color: initial;
+  color: #090A14;
+  margin-right: 12px;
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .top-right button:nth-child(2) {
+    display: initial;
+    margin-right: 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .top-right button:nth-child(2) {
+    margin-right: 18px;
+  }
+}
+.top-right button:nth-child(1) {
+  display: block;
+  color: #090A14;
+  font-size: 25px;
+  border: none;
+}
+@media only screen and (min-width: 992px) {
+  .top-right button:nth-child(1) {
+    display: none;
+  }
+}
+.top-right button:nth-child(3) {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .top-right button:nth-child(3) {
+    display: initial;
+  }
+}
+
+.main-heading {
+  margin-top: 76px;
+}
+.main-heading h1 {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 28px;
+}
+@media only screen and (min-width: 768px) {
+  .main-heading h1 {
+    font-size: 50px;
+    line-height: 126%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

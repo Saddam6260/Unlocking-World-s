@@ -6,7 +6,16 @@ body{
     font-family: "jost";
 }
 
+@mixin background($url, $size, $position, $repeat) {
+    background-image: $url;
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
 // Fonts
+
+$dark14: #090A14;
+$dark27: #141527;
 
 @mixin font-generator ($name, $weight, $url) {
     @font-face {
@@ -95,6 +104,7 @@ $screensize: (
     color: white;
     @include py(12px, 12px);
     @include px(32px, 32px);
+    @include fonts(14px, 600, 20px);
 }
 
 ul{
