@@ -4,7 +4,6 @@
 }
 body{
     font-family: "jost";
-    background-color:  #131A52;
 }
 
 // Fonts
@@ -17,8 +16,7 @@ body{
     }  
 }
 
-
-// @include font-generator( 'Jost', 400, 'Regular');
+@include font-generator( 'Jost', 400, 'Regular');
 
 @for $var from 1 to 7 {
     $urlList: 'Black', 'Bold', 'ExtraBold', 'Medium', 'Regular', 'SemiBold';
@@ -35,6 +33,7 @@ body{
 // Container
 
 .container{
+    max-width: 1440px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +45,63 @@ body{
     }
 }
 
-// $screensize {
-//     "576px": "540px",
-//     "768px": "720px"
-// }
+$screensize: (
+    "576px": "540px",
+    "768px": "720px",
+    "992px": "960px",
+    "1200px": "1140px",
+    "1400px": "1320px",
+);
+
+@each $screen, $max in $screensize {
+    .container{
+        @include media($screen) {
+            max-width: unquote($max);
+        }
+    }
+}
+
+// Padding and margin
+
+@mixin py($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin px($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
+@mixin my($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
+@mixin mx($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+// Common style
+
+@mixin display($display, $direction, $justify-content, $align-items) {
+    display: $display;
+    flex-flow: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    @include py(12px, 12px);
+    @include px(32px, 32px);
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+@import "partials/main-sec"

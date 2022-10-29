@@ -5,9 +5,13 @@
 
 body {
   font-family: "jost";
-  background-color: #131A52;
 }
 
+@font-face {
+  font-family: "Jost";
+  font-weight: 400;
+  src: url("../fonts/Jost-Regular.ttf");
+}
 @font-face {
   font-family: "Jost";
   font-weight: 900;
@@ -39,9 +43,102 @@ body {
   src: url("../fonts/Jost-SemiBold.ttf");
 }
 .container {
+  max-width: 1440px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.topber {
+  display: flex;
+  flex-flow: row;
+  justify-content: initial;
+  align-items: center;
+  padding-top: 23px;
+}
+
+.tophead-logo {
+  display: flex;
+  flex-flow: row;
+  justify-content: initial;
+  align-items: center;
+}
+.tophead-logo img {
+  width: 33px;
+  height: 22px;
+}
+.tophead-logo h2 {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 20px;
+}
+
+.top-menu {
+  margin-left: 91px;
+}
+.top-menu ul {
+  display: flex;
+  flex-flow: row;
+  justify-content: initial;
+  align-items: initial;
+  column-gap: 24px;
+}
+.top-menu ul a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: black;
+}
+
+.top-right {
+  margin-left: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

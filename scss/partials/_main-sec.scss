@@ -1,0 +1,32 @@
+.topber{
+    @include display(flex, row, initial, center);
+    padding-top: 23px;
+}
+.tophead-logo{
+    @include display(flex, row, initial, center);
+
+    img{
+        width: 33px;
+        height: 22px;
+    }
+    h2{
+        @include fonts(18px, 900, 20px);
+    }
+}
+
+.top-menu{
+    margin-left: 91px;
+    ul{
+        @include display(flex, row, initial, initial);
+        column-gap: 24px;
+
+        a{
+            @include fonts(14px, 500, 20px);
+            color: black;
+        }
+    }
+}
+
+.top-right{
+    margin-left: auto;
+}
