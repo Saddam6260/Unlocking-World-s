@@ -1,7 +1,9 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
+
 body{
     font-family: "jost";
     background-color: #131A52;
@@ -18,6 +20,9 @@ body{
 
 $dark14: #090A14;
 $dark27: #141527;
+$blue: #093CBD;
+$blue47: #1A2747;
+
 
 @mixin font-generator ($name, $weight, $url) {
     @font-face {
@@ -42,6 +47,9 @@ $dark27: #141527;
 }
 
 // Container
+p{
+    color: $dark27;
+}
 
 .container{
     max-width: 1440px;
@@ -83,13 +91,13 @@ $screensize: (
     padding-left: $left;
     padding-right: $right;
 }
-@mixin my($left, $right) {
-    padding-left: $left;
-    padding-right: $right;
-}
 @mixin mx($left, $right) {
-    padding-left: $left;
-    padding-right: $right;
+    margin-left: $left;
+    margin-right: $right;
+}
+@mixin my($left, $right) {
+    margin-top: $left;
+    margin-bottom: $right;
 }
 
 // Common style
@@ -133,6 +141,12 @@ a{
 
 // arrow
 
+.arrow-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 .shift-arrow{
     display: flex;
     flex-flow: row wrap;
@@ -156,3 +170,6 @@ a{
 
 @import "partials/main-sec";
 @import "partials/solutions";
+@import "partials/_footer2.scss";
+@import "partials/news-resourse";
+@import "partials/developer";

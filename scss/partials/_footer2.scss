@@ -1,0 +1,109 @@
+// Decision style
+.decision-sec{
+    @include py(67px, 51px);
+    background-image: url("../img/ready-to-unlock.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.decision-wrap{
+    text-align: center;
+
+    h1{
+        color: white;
+        @include fonts(24px, 700, 123%);
+        margin-bottom: 7px;
+    }
+    p{
+        color: white;
+        @include fonts(16px, 400, 123%);
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .btn{
+        background-color: white;
+        color: $dark27;
+        margin-top: 23px;
+    }
+}
+
+// Footer style
+
+footer{
+    background-color: white;
+    .container{
+        @include py(66px, 48px);
+    }
+}
+
+.foot-row{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 40px;
+
+    @include media(992px) {
+        row-gap: 0px;
+    }
+}
+
+.foot-left{
+    width: 100%;
+
+    @include media(992px) {
+        width: 35%;
+    }
+    @include media(1400px) {
+        width: 30%;
+    }
+
+    p{
+        @include my(25px, 25px);
+        @include fonts(14px, 400, 24px);
+
+        @include media(992px) {
+            @include my(52px, 57px);
+        }
+    }
+    a{
+        color: $dark27;
+        @include fonts(14px, 600, 24px);
+        text-decoration: underline;
+    }
+}
+
+.foot-right{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    @include media(992px) {
+        width: 60%;
+        margin-left: auto
+    }
+    @include media(992px) {
+        width: 45%;
+        margin-right: 100px;
+    }
+
+    h5{
+        @include fonts(14px, 700, 24px);
+        margin-bottom: 24px;
+    }
+    ul{
+       a{
+        @include fonts(14px, 400, 30px);
+        color: $dark27;
+       }
+    }
+}
+
+.foot-bottom{
+    text-align: center;
+    @include py(10px, 10px);
+    background-color: #131A52;
+    p{
+        color: white;
+        @include fonts(14px, 500, 20px);
+    }
+}

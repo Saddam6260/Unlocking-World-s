@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -43,6 +44,10 @@ body {
   font-weight: 600;
   src: url("../fonts/Jost-SemiBold.ttf");
 }
+p {
+  color: #141527;
+}
+
 .container {
   max-width: 1440px;
   width: 100%;
@@ -118,6 +123,12 @@ a {
   }
 }
 
+.arrow-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 .shift-arrow {
   display: flex;
   flex-flow: row wrap;
@@ -145,7 +156,7 @@ a {
   background: url(../img/main-sec-img.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   padding-bottom: 285px;
 }
 
@@ -398,6 +409,332 @@ a {
 .solution-card .card-img img {
   width: 100%;
   height: 100%;
+}
+
+.decision-sec {
+  padding-top: 67px;
+  padding-bottom: 51px;
+  background-image: url("../img/ready-to-unlock.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.decision-wrap {
+  text-align: center;
+}
+.decision-wrap h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 123%;
+  margin-bottom: 7px;
+}
+.decision-wrap p {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 123%;
+  display: flex;
+  flex-flow: column wrap;
+}
+.decision-wrap .btn {
+  background-color: white;
+  color: #141527;
+  margin-top: 23px;
+}
+
+footer {
+  background-color: white;
+}
+footer .container {
+  padding-top: 66px;
+  padding-bottom: 48px;
+}
+
+.foot-row {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 40px;
+}
+@media only screen and (min-width: 992px) {
+  .foot-row {
+    row-gap: 0px;
+  }
+}
+
+.foot-left {
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .foot-left {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .foot-left {
+    width: 30%;
+  }
+}
+.foot-left p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media only screen and (min-width: 992px) {
+  .foot-left p {
+    margin-top: 52px;
+    margin-bottom: 57px;
+  }
+}
+.foot-left a {
+  color: #141527;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.foot-right {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 992px) {
+  .foot-right {
+    width: 60%;
+    margin-left: auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .foot-right {
+    width: 45%;
+    margin-right: 100px;
+  }
+}
+.foot-right h5 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.foot-right ul a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #141527;
+}
+
+.foot-bottom {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #131A52;
+}
+.foot-bottom p {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.news-resources-wrap {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: auto;
+  background-image: linear-gradient(white, white);
+  background-size: 94% 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding-top: 55px;
+}
+@media only screen and (min-width: 1400px) {
+  .news-resources-wrap {
+    background-size: 94% 371px;
+  }
+}
+
+.news-resources {
+  margin-left: 12.34%;
+}
+
+.arrow-wrap {
+  margin-top: 30px;
+}
+
+.news-card-wrap {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 20px;
+  margin-top: 36px;
+}
+@media only screen and (min-width: 768px) {
+  .news-card-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 30px;
+  }
+}
+
+.news-card {
+  width: 80%;
+}
+@media only screen and (min-width: 768px) {
+  .news-card {
+    width: 46%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .news-card {
+    width: 23%;
+  }
+}
+.news-card .news-card-img {
+  height: 213px;
+  width: 100%;
+}
+.news-card .news-card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.news-card-body {
+  padding-top: 27px;
+  padding-bottom: 28px;
+  padding-left: 24px;
+  padding-right: 0px;
+  height: 158px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  background-color: white;
+}
+.news-card-body h5 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 133%;
+  color: #141527;
+}
+.news-card-body p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #141527;
+  margin-top: 5px;
+}
+.news-card-body .read-more a {
+  color: #093CBD;
+  text-decoration: underline;
+}
+
+.developer-wrap {
+  width: 95.2%;
+  background-color: #141527;
+  margin-top: 100px;
+}
+
+.developer {
+  margin-left: 12.34%;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.developer .border1px {
+  background-color: white;
+}
+.developer .sec-head {
+  color: white;
+  margin-top: 30px;
+}
+
+.dright-side {
+  width: 450px;
+  margin-top: 60px;
+  display: flex;
+  flex-flow: column wrap;
+  order: 1;
+}
+@media only screen and (min-width: 768px) {
+  .dright-side {
+    width: 546px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .dright-side {
+    width: 450px;
+    margin-left: 70px;
+    order: 2;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .dright-side {
+    margin-left: 100px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .dright-side {
+    width: 546px;
+    margin-left: 150px;
+  }
+}
+.dright-side ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+  column-gap: 20px;
+  margin-bottom: 15px;
+}
+.dright-side ul a {
+  color: white;
+}
+
+.dleft-side {
+  margin-top: 100px;
+}
+@media only screen and (min-width: 992px) {
+  .dleft-side {
+    margin-top: 124px;
+    order: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .dleft-side {
+    width: 33%;
+  }
+}
+.dleft-side p {
+  display: flex;
+  flex-flow: column;
+  color: white;
+}
+.dleft-side .btn {
+  background-color: white;
+  color: #141527;
+  margin-top: 100px;
+}
+
+.img-wrap {
+  height: 250px;
+  background-color: #1A2747;
+}
+@media only screen and (min-width: 768px) {
+  .img-wrap {
+    height: 300px;
+  }
+}
+.img-wrap img {
+  width: 100%;
+  height: 90%;
+}
+
+@media only screen and (min-width: 992px) {
+  .develop-content {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
