@@ -1,0 +1,102 @@
+.solution-sec{
+    background-image: linear-gradient(white, white);
+    background-position: right top;
+    background-size: 95.27% 100%;
+    background-repeat: no-repeat;
+    margin-top: -100px;
+}
+
+.solution-wrap{
+    margin-left: 12.43%;
+    padding-bottom: 87px;
+    padding-top: 102px;
+
+    .border1px{
+        margin-top: 85px;
+    }
+
+    .arrow-wrap{
+        margin-bottom: 49px;
+    }
+}
+
+.division-content{
+    @include py(20px, 20px);
+    @include px(35px, 35px);
+    background-color: $dark27;
+    margin-bottom: 35px;
+    width: 80.22%;
+    margin-top: -172px;
+
+    @include media(768px) {
+        width: 75%;
+        @include py(25px, 25px);
+        @include px(50px, 50px);
+    }
+    @include media(992px) {
+        width: 70%;
+        @include py(30px, 30px);
+        @include px(60px, 60px);
+    }
+    @include media(1200px) {
+        width: 67.22%;
+        @include py(39px, 39px);
+        @include px(91px, 91px);
+    }
+
+    p{
+        color: white;
+        @include fonts(20px, 600, 123%)
+    }
+}
+
+.solutions-card-set{
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 40px;
+}
+
+@for $i from 1 through 4 {
+    
+    @if $i == 1{
+        .solution-card:nth-child(#{$i}) {
+            display: block;
+        }
+    }
+    @else{
+        .solution-card:nth-child(#{$i}) {
+            display: none;
+        }
+    }
+}
+.solution-card:nth-child(2) {
+    @include media(768px) {
+        display: block;
+    }
+}
+.solution-card:nth-child(3) {
+    @include media(1200px) {
+        display: block;
+    }
+}
+.solution-card:nth-child(4) {
+    @include media(1440px) {
+        display: block;
+    }
+}
+.solution-card{
+    width: 296px;
+
+    @include media(1440px) {
+        width: 285px;
+    }
+
+    .card-img{
+        height: 147px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+    }
+}
