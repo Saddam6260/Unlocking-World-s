@@ -1,0 +1,123 @@
+.products{
+    margin-top: 100px;
+    background-image: linear-gradient($dark27, $dark27);
+    background-size: 95.27% 100%;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    @include media(768px) {
+        background-size: 95.27% 464px;
+    }
+}
+
+.products-wrap{
+    margin-left: 12.43%;
+    padding-top: 60px;
+
+    .border1px{
+        background-color: white;
+    }
+    .arrow-wrap{
+        .sec-head{
+            color: white;
+        }
+    }
+    .arrow{
+        color: white;
+        border: 1px solid white;
+    }
+    .right-arrow{
+        background-color: white;
+        color: $dark27;
+    }
+
+    .ready-to-use{
+        margin-top: 60px;
+        margin-bottom: 32px;
+
+        a{
+            color: white;
+            @include fonts(20px, 600, 123%);
+        }
+        a:first-child{
+            border-bottom: 1px solid white;
+        }
+        a:last-child{
+            margin-left: 24px;
+            font-weight: 400;
+
+        }
+    }
+}
+
+.product-card-set{
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 30px;
+
+    @include media(768px) {
+        flex-flow: row wrap;
+        column-gap: 30px;
+    }
+}
+@for $i from 1 through 4 {
+    
+    @if $i == 1{
+        .product-card:nth-child(#{$i}) {
+            display: block;
+        }
+    }
+    @else{
+        .product-card:nth-child(#{$i}) {
+            display: none;
+        }
+    }
+}
+.product-card:nth-child(2) {
+    @include media(768px) {
+        display: block;
+    }
+}
+.product-card:nth-child(3) {
+    @include media(1200px) {
+        display: block;
+    }
+}
+.product-card:nth-child(4) {
+    @include media(1400px) {
+        display: block;
+    }
+}
+.product-card{
+    max-width: 296px;
+    height: 328px;
+    background-color: white;
+
+    @include media(1400px) {
+        max-width: 282px;
+    }
+    
+    img{
+        width: 100%;
+        height: 213px;
+
+        @include media(1400px) {
+            height: 200px;
+        }
+    }
+    .card-body{
+        margin-left: 24px;
+        margin-top: 20px;
+
+        h5{
+            @include fonts(18px, 700, 133%);
+            color: $dark27;
+        }
+
+        p{
+            @include fonts(14px, 400, 20px);
+            margin-top: 4px;
+        }
+    }
+}
+
